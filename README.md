@@ -1,8 +1,8 @@
 # HAPI Elements Examples
 
-All projects can be ran by `cd` into respective directory then do:
-1. `npm install` or `yarn`
-2. `npm run start` or `yarn start` 
+All projects can be run by `cd` into respective directory then do:
+1. `yarn`
+2. `yarn start` 
 
 
 ## Framework Examples

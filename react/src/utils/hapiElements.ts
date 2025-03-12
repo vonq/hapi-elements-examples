@@ -1,11 +1,11 @@
-import { OurJob } from "../types"
+import {OurJob} from "../types"
 import {
     CampaignCreateForm,
     CampaignCreateFormPostingDetails,
-    EmploymentType,
-    SalaryPeriod,
-    RecursivePartial,
     CampaignPostingDetailsSalaryIndication,
+    EmploymentType,
+    RecursivePartial,
+    SalaryPeriod,
 } from "@vonq/hapi-elements-types"
 
 export const mapPostingDetailsEmploymentType = (
@@ -72,7 +72,7 @@ export const mapPostingDetailsSalaryIndication = (
     job: OurJob,
 ): CampaignPostingDetailsSalaryIndication => {
     return {
-        period: SalaryPeriod.YEARLY,
+        period: SalaryPeriod.yearly,
         range: {
             from: 0,
             to: 0,
