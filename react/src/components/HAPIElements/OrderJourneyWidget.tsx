@@ -3,7 +3,7 @@ import React from "react"
 type Props = {}
 
 const HAPIElementsOrderJourneyWidget: React.ComponentType<Props> = ({}) => {
-    return <he-orderjourney></he-orderjourney>
+    return <he-orderjourney-shorter></he-orderjourney-shorter>
 }
 
 export default HAPIElementsOrderJourneyWidget
