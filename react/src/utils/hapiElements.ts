@@ -72,7 +72,7 @@ export const mapPostingDetailsSalaryIndication = (
     job: OurJob,
 ): CampaignPostingDetailsSalaryIndication => {
     return {
-        period: SalaryPeriod.YEARLY,
+        period: SalaryPeriod.yearly,
         range: {
             from: 0,
             to: 0,
