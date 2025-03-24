@@ -5,23 +5,15 @@ import OurOwn from "./pages/our-own"
 import HomePage from "./pages/home"
 import ElementsOrderJourneyCompletePage from "./pages/hapi-elements-order-journey-complete"
 import OurAdminPage from "./pages/our-admin"
-import HAPIElementsLoader from "./components/HAPIElements/Loader"
-import HAPIElementsAuthenticator from "./components/HAPIElements/Authenticator"
+import HAPIElementsInjector from "./components/HAPIElements/Injector"
 import ElementsOrderJourneyWithoutAddContractsPage from "./pages/hapi-elements-order-journey-without-add-contracts"
 
 const getChildrenWrappedWithLayout = (children: any) => (
     <Layout>{children}</Layout>
 )
 
-const getChildrenWithHAPIElements = (
-    children: any,
-    onLoadElements?: () => void,
-) => (
-    <HAPIElementsAuthenticator>
-        <HAPIElementsLoader onLoadElements={onLoadElements}>
-            {children}
-        </HAPIElementsLoader>
-    </HAPIElementsAuthenticator>
+const getChildrenWithHAPIElements = (children: any) => (
+    <HAPIElementsInjector>{children}</HAPIElementsInjector>
 )
 
 export const appRoutes: RouteObject[] = [
