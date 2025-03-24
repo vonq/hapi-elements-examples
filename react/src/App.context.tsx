@@ -1,26 +1,35 @@
 import { createContext, useEffect, useReducer } from "react"
 import { appStateReducer } from "./reducers/appStateReducer"
 
+export type BackendProxyExampleUser = {
+    id: string
+    tenantId: string
+    name: string
+    roleId: string
+    accessToken: string
+}
+
 export type AppContext = {
+    elementsInjectorHasLoaded: boolean
     elementsIsLoading: boolean
     elementsHasLoaded: boolean
+    isUsingBackendProxyExample: boolean
+    backendProxyExampleUsers: BackendProxyExampleUser[]
     user: {
         id: string
         hapiCredentials: {
-            partnerId: string
-            clientId: string
             clientToken: string
         } | null
-    }
+    } | null
 }
 
 const initialState: AppContext = {
+    elementsInjectorHasLoaded: false,
     elementsIsLoading: false,
     elementsHasLoaded: false,
-    user: {
-        id: "demo-id-123",
-        hapiCredentials: null,
-    },
+    isUsingBackendProxyExample: false,
+    backendProxyExampleUsers: [],
+    user: null,
 }
 
 export const appContext = createContext<{
