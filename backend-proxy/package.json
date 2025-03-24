@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon"
+    "start": "nodemon"
   },
   "private": true,
   "dependencies": {
